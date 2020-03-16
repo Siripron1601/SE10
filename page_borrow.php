@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <?php include "link.php"?>
+<title>ระบบยืมของภาควิชาคอม</title>
+</head>
+
+<body id="page-top">
+  <div id="wrapper" >
+
+    <!-- อันนี้ไว้เรียกใช้แท็บข้างๆๆ -->
+      <?php include "logout.php" ?>
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column" style="background-color: #EBF5FB;">
+
+      <!-- Main Content -->
+      <div id="content" >
+
+        <!-- อันนี้ไว้เรียกใช้แท็บบน -->
+        <?php include "Topbar.php" ?>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+           
+
+        <!-- เริ่ม -->
+            <div class="row" >
+
+                  <!-- ส่วนของคำว่า "หน้าหลัก" -->
+                <div class="col-xl-12 col-12 mb-4"  >
+                    <div class="card" >
+                        <div class="card-header card-bg  header-text-color"  style="background-color:#fff;">
+                            อุปกรณ์
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                  <!-- จบ ส่วนของคำว่า "หน้าหลัก" -->
+                 
+              
+            </div>
+        <!-- จบ -->
+  
+
+         <!-- ส่วนของตาราง รายการขอยื่ม -->
+         <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="h5 m-0 font-weight-bold text-primary">รายการอุปกรณ์ </h6>
+                  <button type="button" style="float:right;" class="btn btn-success" data-toggle="modal" data-target="#modal-1">ยื่นยัน 1 <i class="fas fa-shopping-cart"></i> </button>
+                 
+               
+                 
+                  <div class="col-3">
+                  เลือกหมวดหมู่
+                    <select class="form-control" id="cars">
+                      <option value="volvo">ทั้งหมด</option>
+                      <option value="volvo">เครื่องฉาย</option>
+                      <option value="saab">อุปกรณ์คอม</option>
+                    </select>
+                    
+                  </div>
+
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <colgroup>
+                        <col  width="20">
+                        <col  width="20">
+                        <col  width="20">
+                        <col  width="20">
+                        <col  width="20">
+                        <col  width="20">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>ภาพ</th>
+                          <th>ชื่ออุปกรณ์</th>
+                          <th>หมวดหมู่</th>
+                          <th>จำนวนที่เหลือ</th>
+                          <th>รายละเอียด</th>
+                          <th style="text-align:center;">ทำรายการ</th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                          <th>ภาพ</th>
+                          <th>ชื่ออุปกรณ์</th>
+                          <th>หมวดหมู่</th>
+                          <th>จำนวนที่เหลือ</th>
+                          <th>รายละเอียด</th>
+                          <th style="text-align:center;">ทำรายการ</th>
+                        </tr>
+                      </tfoot>
+                      <tbody>
+                        <tr>
+                          <td><img src="https://cv.lnwfile.com/fl0jxa.jpg" alt="Lights" style="width:100%;max-width:100px"></td>
+                          <td>เครื่องฉายภาพ</td>
+                          <td>เครื่องฉาย</td>
+                          <td>5 </td>
+                          <td>เป็นอุปกรณ์สำหรับฉายภาพจากสัญญาณวิดีโอ ผ่านระบบเลนส์ไปยังฉากรับภาพ โดยใช้ไฟที่สว่างและจ้าในการฉายภาพ</td>
+                          <td style="text-align:center;">
+                            <button type="button" class="btn btn-success btn-sm " data-toggle="tooltip" title="" data-original-title="อยู่ในรายการ"><i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img src="https://images.samsung.com/is/image/samsung/th-led-sf350-ls24f350fhexxt-001-front-black?$PD_GALLERY_L_JPG$" alt="Lights" style="width:100%;max-width:100px"></td>
+                          <td>จอคอมพิวเตอร์</td>
+                          <td>อุปกรณ์คอม</td>
+                          <td>7</td>
+                          <td>จอ LED SAMSUNG 27 นิ้ว Full HD ดีไซน์บางเฉียบ พร้อมมุมมองกว้างพิเศษ 178 องศา เพื่อการรับชมที่สมบูรณ์แบบ</td>
+                          <td style="text-align:center;">
+                            <button type="button" class="btn btn-danger btn-sm " data-toggle="tooltip" title="" data-original-title="ไม่อยู่ในรายการ"><i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+                          </td>
+                        </tr>
+                    
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+        <!-- จบ ส่วนของตาราง รายการรออนุมัติ-->
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+ 
+ 
+</body>
+
+</html>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
